@@ -1,0 +1,17 @@
+use function for calculating optimized c and g values on training samples and labels
+
+70% training, 30% testing
+Divide data into training and testing subsets..
+
+test_feature_matrix (k x N2)     N2 = NO. OF TEST IMAGES
+test_lable          (1 x N2)     K = NO. OF FEATURES
+                                 N1 = NO. OF TRAIN IMAGES
+train_feature_matrix (k x N1)
+train_label           (1 X N1)
+
+model = svmtrain(train_label',train_features', '-c 1 -g 0.01')
+(predicted_labels, accuracy, dec_value)=svmpredict(test_label,test_features',model)
+
+accuracy
+
+(predict_label,...)=svmpredict(new_image_features,model)
